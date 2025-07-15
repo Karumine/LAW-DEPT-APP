@@ -36,3 +36,66 @@
     transform: rotate(360deg);
   }
 }
+
+
+/* ใน App.css หรือไฟล์ CSS ของคุณ */
+
+.collapse-content {
+  max-height: 1500px; /* ค่านี้อาจจะต่างกัน */
+  overflow: hidden;
+  transition: max-height 0.5s ease-in-out;
+}
+
+.collapse-content-collapsed {
+  max-height: 68px; /* ทำให้ยุบสนิท */
+  overflow: hidden;
+  transition: max-height 0.5s ease-in-out;
+}
+
+
+/* เพิ่มโค้ดนี้ในไฟล์ App.css หรือไฟล์ CSS ที่คุณใช้ */
+
+.dropdown-item:hover {
+  background-color: #c9d6e2; /* สีพื้นหลังเมื่อ hover */
+  color: #16181b; /* สีข้อความเมื่อ hover */
+  /* คุณสามารถปรับสีได้ตามต้องการ เช่น */
+  /* background-color: #a1c4fd; */
+  /* color: white; */
+}
+
+/* เพื่อให้มี transition ที่นุ่มนวลขึ้นเมื่อ hover (ไม่จำเป็นแต่ช่วยให้ดูดีขึ้น) */
+.dropdown-item {
+  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+
+
+/* src/App.css */
+
+/* ... (โค้ด CSS เดิมของคุณ เช่น .App, .App-logo, .collapse-content) ... */
+
+/* Custom styling for Bootstrap switch */
+.form-check.form-switch .form-check-input {
+  width: 2.5em; /* Adjust width */
+  height: 1.25em; /* Adjust height */
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%236a5acd'/%3e%3c/svg%3e"); /* Custom thumb color */
+  border-color: #6a5acd; /* Border color for switch track */
+  transition: background-position .15s ease-in-out;
+}
+
+.form-check.form-switch .form-check-input:focus {
+  box-shadow: 0 0 0 0.25rem rgba(106, 90, 205, 0.25); /* Focus shadow */
+}
+
+.form-check.form-switch .form-check-input:checked {
+  background-color: #6a5acd; /* Background color when checked */
+  border-color: #6a5acd;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%23fff'/%3e%3c/svg%3e"); /* White thumb when checked */
+}
+
+/* Ensure dropdown items have proper hover effect */
+.dropdown-item:hover {
+  background-color: #e9ecef; /* Light gray background on hover */
+  color: #16181b; /* Dark text on hover */
+  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+
